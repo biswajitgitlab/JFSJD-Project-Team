@@ -1,0 +1,22 @@
+[
+  {
+    
+    "name": "Product 1",
+    "price": 9.99,
+    "description": "This is product 1",
+    "image": "https://images.unsplash.com/photo-1680252112129-91e7840cba38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
+  },
+  {
+    "name": "Product 2",
+    "price": 19.99,
+    "description": "This is product 2",
+    "image": "https://example.com/product2.jpg"
+    
+  },
+  {
+    "name": "Product 3",
+    "price": 29.99,
+    "description": "This is product 3",
+    "image": "https://example.com/product3.jpg"
+  }
+]

@@ -1,0 +1,190 @@
+/* .nav{
+    background-color: green;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li{
+    display: inline-block;
+    
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+li:hover{
+    color: yellow;
+}
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+  .topnav{
+    position: fixed;
+  }
+} */
+header {
+  display: flex;
+  align-items: center;
+  padding: .5rem 3.75rem;
+  background-color: #dfe5e0;
+}
+
+header .logo-small {
+  display: none;
+}
+
+header .logo-small,
+header .logo-big {
+  flex-grow: 1;
+}
+
+nav li {
+  display: inline;
+  padding-right: 2rem;
+}
+
+nav li:last-child {
+  padding-right: 0;
+}
+
+@media only screen and (max-width: 990px) {
+  header .logo-big {
+    display: none;
+  }
+
+  header .logo-small {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  header {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  header .logo-small {
+    margin-bottom: 1rem;
+  }
+}
+ /* Footer */
+    
+ footer {
+  position: relative;
+  height: 30rem;
+  padding: 7.8125rem 30% 0 30%;
+  background: url("/Resources/Images/jan-kopriva-OHo8ST9kugw-unsplash.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  color: white;
+}
+
+footer:before { /* Overlay */
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+footer * {
+  position: relative; /* Makes elements display above overlay. */
+}
+
+footer strong {
+  display: block;
+  margin-bottom: 1.25rem;
+  font-size: 2.25rem;
+}
+
+footer p {
+  margin-bottom: 4.3125rem;
+}
+
+footer .button {
+  padding: 1.25rem 3.75rem;
+  border-radius: 4px;
+  background-color: #ff8000;
+}
+
+@media only screen and (max-width: 560px) {
+  footer {
+    padding: 4.8125rem 15% 0 15%;
+  }
+}
