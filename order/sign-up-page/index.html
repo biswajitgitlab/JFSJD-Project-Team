@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup page</title>
+    <style>
+        body{
+           background-color: aquamarine;
+           font-family: 'Roboto', sans-serif;
+           margin-top: 50px;
+
+        }
+        .signup-box{
+            margin-top: 30px;
+            width: 360px;
+            height: 550px;
+            margin: auto;
+            background-color: white;
+            border-radius: 15px;
+            background-color: rgb(255, 255, 255);
+          
+       
+        }
+
+        h1{
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        form{
+           width: 300px;
+           margin-left: 20px;
+        }
+
+        form label{
+           display: flex;
+           margin-top: 20px;
+           font-size: 18px;
+           font-weight: bold;
+        }
+
+        form input{
+            width: 100%;
+            padding: 7px;
+            border: none;
+            border: 1px solid gray;
+            border-radius: 6px;
+            outline: none;
+
+        }
+
+        input[type="button"]{
+            margin-top: 20px;
+            width: 320px;
+            height: 35px;
+            border: none;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+        }
+        div button{
+            margin-top: 20px;
+            height: 30px;
+            width: 100px;
+            margin-left: px;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: rgb(0, 129, 47);
+            color: white;
+            border-radius: 10px;
+            margin-left: 65%;
+        }
+        div button a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+  <div class="signup-box">
+    <h1>signUp</h1>
+     <form>
+        <label>First name:</label>
+        <input type="text" placeholder="Enter your First-Name" required>
+        <label>Last name:</label>
+        <input type="text" placeholder="Enter your Last Name" required>
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your mail" required>
+        <label>password:</label>
+        <input type="password" placeholder="Enter your password" required>
+        <label>confrom password:</label>
+        <input type="password" placeholder="confrom your password" required>
+        <input type="button" value="Submit">
+     </form>
+      <button><a href="#">Back</a></button>
+  </div>
+</body>
+</html>

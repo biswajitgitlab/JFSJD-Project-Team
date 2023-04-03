@@ -1,0 +1,95 @@
+body {
+    background:aqua;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(https://media.istockphoto.com/id/1187320693/photo/the-farmer-holds-a-money-bag-on-the-background-of-plantations-lending-and-subsidizing-farmers.jpg?b=1&s=170667a&w=0&k=20&c=8AyqmII5G0icCHvrhTYKdY_E9cPKf_r8f8qgePmfsHo=);
+    background-size: 100% 100%;
+}
+.container {
+   width: 80%;
+   margin: 50px auto;
+}
+.contact-box {
+    background-color: aliceblue;
+    display: flex;
+    opacity: 0.80;
+}
+.contact-left {
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+.contact-right {
+    flex-basis: 40%;
+    padding: 40px;
+    background-color: rgb(56, 218, 99);
+    color:azure ;
+}
+h1 {
+    margin-bottom: 10px;
+}
+.container {
+    margin-bottom: 10px;
+}
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.input-row .input-group {
+    flex-basis: 45%;
+
+}
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(22, 162, 0);
+    outline: none;
+    padding-bottom: 5px;
+}
+textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+label {
+    margin-bottom: 6px;
+    display: block;
+    color: indigo;
+}
+button {
+    background: darkgreen;
+    width: 100px;
+    border: none;
+    outline: none;
+    color:aliceblue;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    
+    box-shadow: 10px 5px 5px lightgreen;
+}
+.contact-left h3 {
+    color: darkgreen;
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+.contact-right h3 {
+    
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    
+}
+
+tr td:first-child {
+    padding-right: 20px;
+ 
+}
+select:hover {
+    box-shadow: 2px 4px 2px rgb(151, 234, 173);
+    
+   
+}
