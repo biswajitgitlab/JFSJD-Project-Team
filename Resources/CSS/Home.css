@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #000000;
 }
 
 /* .nav{
@@ -102,14 +105,52 @@ body {
 header {
   display: flex;
   align-items: center;
-  padding: .5rem 3.75rem;
+  padding-left:10px;
+  padding-right: 20px;
   background-color: #203d27;
-  height: 70px;
+  height: 80px;
 
 }
 
 header .logo-small {
   display: none;
+ 
+}
+
+form{
+  display: flex;
+  margin-right: 150px;
+  border-radius: 6px;
+}
+form.example input[type=text] {
+  padding: 5px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 350px;
+  height: 25px;
+  background: #f1f1f1;
+  border-radius: 14px;
+  margin-right: 4px;
+}
+
+form.example button {
+  float: left;
+  width: 17%;
+  padding: 5px;
+  background: #000000;
+  color: white;
+  font-size: 17px;
+  /* border: 1px solid rgb(44, 7, 7); */
+  border-left: none;
+  cursor: pointer;
+  border-radius: 14px;
+  font-weight: bold;
+  
+}
+
+form.example button:hover {
+  background: #c89900;
 }
 
 header .logo-small,
@@ -117,13 +158,14 @@ header .logo-big {
   flex-grow: 1;
 }
 
+
 nav li {
   display: inline;
-  padding-right: 2rem;
+  padding-right: 10px;
 }
 
 nav li:last-child {
-  padding-right: 0;
+  padding-right: 10;
 }
 
 @media only screen and (max-width: 990px) {
@@ -138,11 +180,16 @@ nav li:last-child {
 
 li a{
 background-color: rgb(255, 255, 255);
-padding: 10px;
+padding: 5px;
 text-decoration: none;
 color: rgb(0, 0, 0);
 border-radius: 15px;
 font-weight: bold;
+margin-top: 10px;
+
+
+
+
 }
 
 li a:hover{
@@ -162,29 +209,43 @@ li a:hover{
 }
 
 header .logo-big img{
-width: 65px;
-height: 65px;
-margin-top: 4px;
+width: 50px;
+height: 50px;
+padding-left: 9px;
+
 }
+
+ .ligi-text{
+  float :right;
+  font-size: 38px;
+  font-family: 'Dancing Script', cursive;
+  display: block;
+  padding-right: 250px;
+  color: #00e800;
+}
+
+header .logo-big  span{
  /* Footer */
-    
- footer {
+  padding-bottom: 50px;
+}    
+ main {
   position: relative;
-  height: 30rem;
+  height: 38rem;
   padding: 7.8125rem 30% 0 30%;
   background: url("/Resources/Images/jan-kopriva-OHo8ST9kugw-unsplash.jpg" )  center center no-repeat ;
   background-size: cover;
   text-align: center;
   font-size: 1.125rem;
-  line-height: 1.4;
+  /* line-height: 1.4; */
   color: white;
+  box-sizing: border-box;
 
 
 }
 
 
 
-footer:before { /* Overlay */
+main:before { /* Overlay */
   position: absolute;
   content: "";
   top: 0;
@@ -194,22 +255,22 @@ footer:before { /* Overlay */
 
 }
 
-footer * {
+main * {
   position: relative; /* Makes elements display above overlay. */
 }
 
-footer strong {
+main strong {
   display: block;
   margin-bottom: 1.25rem;
   font-size: 2.25rem;
   color: #ff8000;
 }
 
-footer p {
+main p {
   margin-bottom: 4.3125rem;
 }
 
-footer .button {
+main .button {
   padding: 1.25rem 3.75rem;
   border-radius: 4px;
   background-color: #ff8000;
@@ -218,7 +279,199 @@ footer .button {
 }
 
 @media only screen and (max-width: 560px) {
-  footer {
+  main {
     padding: 4.8125rem 15% 0 15%;
   }
+} 
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
 }
+
+
+.footer-distributed{
+	background:#203d27;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 20px 20px;
+  border-radius: 20px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+
