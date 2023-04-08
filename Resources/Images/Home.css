@@ -102,18 +102,13 @@ body {
     position: fixed;
   }
 } */
-
 header {
   display: flex;
   align-items: center;
-  padding-left:2px;
-  padding-right: 10px;
+  padding-left:10px;
+  padding-right: 20px;
   background-color: #203d27;
-  width: 100%;
   height: 80px;
-  position:fixed;
-  z-index: 10;
- 
 
 }
 
@@ -131,7 +126,7 @@ form.example input[type=text] {
   padding: 5px;
   font-size: 17px;
   border: 1px solid grey;
-  /* float: left; */
+  float: left;
   width: 350px;
   height: 25px;
   background: #f1f1f1;
@@ -164,9 +159,10 @@ header .logo-big {
 }
 
 
-.topnav {
-  display: inline block;
-  padding-right: 0px;
+ nav  li {
+  display: inline;
+  padding: 10px;
+   float: right;
 }
 
 /* nav li:last-child {
@@ -183,18 +179,21 @@ header .logo-big {
   }
 
 
-.topnav a {
+ .head li a{
 background-color: rgb(255, 255, 255);
-padding: 2px;
+padding: 1px;
 text-decoration: none;
 color: rgb(0, 0, 0);
-border-radius: 5px;
+border-radius: 10px;
 font-weight: bold;
-margin-top: 5px;
+margin: 10px 2px 3px 4px;
+
+
+
 
 }
 
-.topnav  a:hover{
+.head  li a:hover{
   background-color: rgb(0, 0, 0);
   color: rgb(189, 198, 163);
 }
