@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>Feature-Rich Shopping Cart Example</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://www.w3schools.com/lib/w3.js"></script>  
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+	<!-- Demo CSS (No need to include it into your project) -->
+	<link rel="stylesheet" href="css/demo.css">
+  
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <span class="big-letter">G</span>reenery</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                  <a class="nav-link active"  aria-current="page" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Home"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                      <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+                    </svg></a>
+                </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"    href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Account" id="navbarScrollingDropdown" role="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                </svg>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="../login/login_from1.html">Log In</a></li>
+                <li><a class="dropdown-item" href="../order/sign-up-page/index.html">Create An Account</a></li>
+                <!-- <li><hr class="dropdown-divider"></li> -->
+                <li><a class="dropdown-item" href="#">Log Out</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"  data-bs-toggle="tooltip" data-bs-placement="top" title="Products"  href="#" id="navbarScrollingDropdown" role="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                </svg>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="#">Seeds</a></li>
+              <li><a class="dropdown-item" href="#">Pesticides</a></li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+              <li><a class="dropdown-item" href="#">Fungicides</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Cart" tabindex="-1" aria-disabled="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></a>
+          </li>
+            
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+<section>
+ <header class="intro">
+ <h1>Our Amazing products</h1>
+ <p>bye that you want</p>
+
+ <!-- <div class="action">
+ <a href="https://www.codehim.com/collections/javascript-shopping-cart-examples-with-demo/" title="Back to download and tutorial page" class="btn back">Back to Tutorial</a>
+ </div> -->
+ </header>
+  
+      
+ <main>
+     <!-- Start DEMO HTML (Use the following code into your project)-->
+     
+<figure class="snip">                <!-- first -->
+    <h4>Bavistin</h4>
+    <div class="image">
+      <img class="slide1" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy5-2_1_large.webp" />
+      <img class="slide1" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy7-6_large.webp" style="display:none;" />
+      <img class="slide1" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy7-6_large.webp" style="display:none;" />
+      <img class="slide1" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy7-6_large.webp" style="display:none;" />
+    </div>
+    <button class="prev" onclick="plusDivs(-1)">&#10094;&#10094;</button>
+    <button class="next" onclick="plusDivs(1)">&#10095;&#10095;</button>
+    <figcaption>
+      <p>Multicoloured printed top, has a mandarin collar with a split V-neckline, a full button placket, three-quarter length sleeves, an elasticated hemline</p>    
+      <div class="price">
+        <s>$24.00</s><div class="real" data-price="19.00">$19.00</div>
+      </div>
+    </figcaption>
+    <a class="add-to-cart" href="#">Add to Cart</a>
+  </figure>
+  
+  <figure class="snip">                <!-- second -->
+    <h4>Bavistin</h4>
+    <div class="image">
+      <img class="slide2" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy5-2_1_large.webp" />
+      <img class="slide2" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy7-6_large.webp" style="display:none;" />
+      <img class="slide2" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy7-6_large.webp" style="display:none;" />
+      <img class="slide2" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy7-6_large.webp" style="display:none;" />
+    </div>
+    <button class="prev" onclick="plusDivs2(-1)">&#10094;&#10094;</button>
+    <button class="next" onclick="plusDivs2(1)">&#10095;&#10095;</button>
+    <figcaption>
+      <p>Brown animal print woven top, has a round neck, three-quarter sleeves</p>    
+      <div class="price">
+        <s>$29.00</s><div class="real" data-price="24.00">$24.00</div>
+      </div>
+    </figcaption>
+    <a class="add-to-cart" href="#">Add to Cart</a>
+  </figure>
+  
+  <figure class="snip">               <!-- third -->
+    <h4>Bavistin</h4>
+    <div class="image">
+      <img class="slide3" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy5-2_1_large.webp" />
+      <img class="slide3" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy7-6_large.webp" style="display:none;" />
+      <img class="slide3" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy7-6_large.webp" style="display:none;" />
+      <img class="slide3" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy7-6_large.webp" style="display:none;" />
+    </div>
+    <button class="prev" onclick="myslide.previous()">&#10094;&#10094;</button>
+    <button class="next" onclick="myslide.next()">&#10095;&#10095;</button>
+    <figcaption>
+      <p>Pack of two black push-up bras, each has underwired, extra-padded with seamless cups, adjustable and detachable multiway shoulder straps, double rows of hook-and-eye closures on the back</p>    
+      <div class="price">
+        <s>$22.00</s><div class="real" data-price="14.55">$14.55</div>
+      </div>
+    </figcaption>
+    <a class="add-to-cart" href="#">Add to Cart</a>
+  </figure>
+  
+  <figure class="snip">               <!-- Fourth -->
+    <h4>Bavistin</h4>
+    <div class="image">
+      <img class="slide4" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy5-2_1_large.webp" />
+      <img class="slide4" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy7-6_large.webp" style="display:none;" />
+      <img class="slide4" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy7-6_large.webp" style="display:none;" />
+      <img class="slide4" src="https://d1.convertcart.com/iresize/rs:fit:340:340/bg:fff/plain/https://cdn.shopify.com/s/files/1/0722/2059/products/Artboard1copy7-6_large.webp" style="display:none;" />
+    </div>
+    <button class="prev" onclick="plusDivs3(-1)">&#10094;&#10094;</button>
+    <button class="next" onclick="plusDivs3(1)">&#10095;&#10095;</button>
+    <figcaption>
+      <p>Navy blue and white striped Bardot top, has short sleeves and shoulder straps</p>    
+      <div class="price">
+        <s>$35.00</s><div class="real" data-price="26.00">$26.00</div>
+      </div>
+    </figcaption>
+    <a class="add-to-cart" href="#">Add to Cart</a>
+  </figure>
+  <a class="cart" href="javascript:void(0);" title="Your Cart">
+    <img src="./img/cart.png" />
+    <span id="count-item" data-count="0">0 item</span>
+  </a>
+  <!-- --------------------Check out ---------------- -->
+  <div class="checkout-container">
+    <div class="table">
+    <span class="empty">Your cart is empty!</span>
+
+    <div class="col1-name"></div>
+    <div class="col2-price"></div>
+    </div>
+    <div class="bin"><span>Clear All</span><img id="bin" src="./img/delete.png" style="width:40px" /></div>
+    <div class="total">
+      <div class="total-text">Total :</div>
+      <div class="total-amount">$ 0</div>
+    </div>
+    <div class="checkout" onclick="document.getElementById('id01').style.display='block'">Check out</div>
+    
+  </div>
+  
+          <!-- -----------------Bill------------- -->
+ <div id="id01" class="modal">
+  <div class="wrapper">
+    <div class="bill-content">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+    <h1 class="box-title">Checkout</h1>
+    <div class="price-total">
+      <span>PAY</span>
+      <div class="pay-last">$ 0</div>
+    </div>
+    <form>
+      
+      <div class="form-text">
+        <label>Card Number</label>
+        <input name="card-number" type="text" required>
+      </div>
+      <div class="form-text">
+        <label>Card Verification Value</label>
+        <input name="name" type="text" placeholder="CVV" required>
+      </div>
+      <div class="form-text" id="col01">
+        <label>Expiry Date</label>
+        <input name="card-number" type="text" placeholder="MM/YY" maxlength="3" required>
+      </div>
+      <div class="form-text"  id="col02">
+        <label>Coupon Code</label>
+        <input name="card-number" type="text">
+      </div>
+      
+      <button id="end">PAY NOW</button>
+    </form>
+      <button id="coupon">Get coupon code</button>
+    </div>
+  </div>
+ </div> 
+     
+     <!-- END EDMO HTML (Happy Coding!)-->
+ </main>
+</section>
+ 
+      
+  <footer class="credit">Author: Minh Quang - Distributed By: <a title="Awesome web design code & scripts" href="https://www.codehim.com?source=demo-page" target="_blank">CodeHim</a></footer>
+  
+
+ <script  src="./js/script.js"></script>
+      
+  </body>
+</html>
