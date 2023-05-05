@@ -1,7 +1,7 @@
-html,
+
 body {
     height: 400px;
-    margin-top: 60px;
+    padding: 10px;
 }
 
 .carousel,
@@ -125,7 +125,7 @@ p{padding:10px}
   background-color: rgba(127, 255, 212, 0.504);
   text-align: center;
 }
-/*  */
+/* tooltips */
 .tooltip-inner {
   background-color: #222;
   color: #fff;
