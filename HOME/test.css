@@ -1,0 +1,315 @@
+/* Vlogs */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-slide {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.left-slide > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.left-slide h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.right-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+}
+
+button:hover {
+  color: #222;
+  background-color: darkgreen;
+}
+
+button:focus {
+  outline: none;
+}
+
+.slider-container .action-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+
+.slider-container .action-buttons .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.slider-container .action-buttons .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.readmore{
+
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  border-radius: 10px;
+  color: #222;
+  padding: 10px;
+  
+}
+
+.heading{
+  font-family:'Times New Roman', Times, serif;
+  color: rgb(143, 160, 143);
+  outline-color: black;
+  padding:10px;
+  padding-left: 20px;
+}
+
+.readmore:hover{
+
+   background-color: rgb(0, 0, 0);
+   color: white;
+   
+}
+.text{
+ 
+  width: 350px;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-family: bold;
+  
+}
+
+body {
+    height: 400px;
+    padding: 10px;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+  background: #000;
+}
+
+.carousel-caption{padding-bottom:80px;}
+
+h2{font-size: 60px;}
+p{padding:10px}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    opacity:0.6;
+}
+
+
+
+
+/**
+ * Button
+ */
+.btn-transparent {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.btn-transparent:hover {
+  background-color: #fff;
+}
+
+.btn-rounded {
+  border-radius: 70px;
+}
+
+.btn-large {
+  padding: 11px 45px;
+  font-size: 18px;
+}
+
+/**
+ * Change animation duration
+ */
+.animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+
+
+  
+ 
+
+
+
+/* tooltips */
+.tooltip-inner {
+  background-color: #222;
+  color: #fff;
+}
+.tooltip.top .tooltip-arrow {
+  border-top-color: #222;
+}
+.navbar-brand .big-letter {
+  font-size: 36px;
+  color: green;
+  font-weight: bold;
+}
+.bi-house:hover path {
+  fill: green;
+}
+
+.dropdown-menu a.dropdown-item:hover {
+  background-color: green;
+  color: white;
+}
+
+
+/* Product Carsoul */
+.product-carousel
+  {
+  background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.2.12660581.1682370161&semt=robertav1_2_sidr);
+  background-repeat: no-repeat; /* add background-repeat property */
+  background-size: cover; /* add background-size property */
+  margin: 5px;
+}
+
+
+.product-carousel .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .product-carousel .card {
+    flex-direction: column;
+  }
+}
+
+  
+.card-title{
+  font-family: cursive;
+}
+.card {
+  border-radius: 12px;
+  
+  width: auto;
+  border: 5px solid green;
+    border-style:ridge;
+    margin: 10px;
+    padding: 5px;
+}
+  
+
+
+.card-img-top {
+    object-fit:contain;
+    max-height: 200px;
+}
+.card-body{
+  background-color: rgba(127, 255, 212, 0.504);
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 20px;
+} 
+  
