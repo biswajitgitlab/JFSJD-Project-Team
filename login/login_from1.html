@@ -34,5 +34,25 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const loginBtn = document.querySelector('button');
+    const usernameInput = document.querySelector('input[type="text"]');
+    const passwordInput = document.querySelector('input[type="password"]');
+  
+    loginBtn.addEventListener('click', (event) => {
+      event.preventDefault(); // prevent form submission
+    
+      // check if both fields are filled
+      if (usernameInput.value.trim() === '' || passwordInput.value.trim() === '') {
+        alert('Please fill in both username and password fields');
+      } else {
+        // show success message
+        alert('Login successful!');
+        // you can also redirect to a new page here or perform other actions
+      }
+    });
+  </script>
+  
 </body>
 </html>
